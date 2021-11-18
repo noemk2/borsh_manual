@@ -3,16 +3,15 @@ extern crate base64;
 
 #[derive(BorshSerialize, BorshDeserialize, PartialEq, Debug)]
 struct A {
-    name: String,
-    symbol: String,
-    decimals: u8,
+    //name: String,
+    //symbol: String,
+    //decimals: u8,
+    msg: String,
 }
 
 fn test_simple_struct() {
     let a = A {
-        name: "ChainLink Token".to_string(),
-        symbol: "LINK".to_string(),
-        decimals: 18,
+        msg: "Lo hice xd".to_string(),
     };
 
     let encoded_a: Vec<u8> = a.try_to_vec().unwrap();
